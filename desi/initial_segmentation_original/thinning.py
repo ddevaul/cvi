@@ -3,7 +3,7 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
-image = cv2.imread("../../extracted_images/page35.jpeg")
+image = cv2.imread("../plant_images/page35.jpeg")
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 k = 2
 _, binary_image = cv2.threshold(gray_image, 150, 255, cv2.THRESH_BINARY)

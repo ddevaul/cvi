@@ -43,9 +43,9 @@ def contour_image(img_path: str):
 	return return_image
 
 def main():
-	files = os.listdir("../../extracted_images")
+	files = os.listdir("../plant_images")
 	for f in files:
-		contoured_image = contour_image(f"../../extracted_images/{f}")
+		contoured_image = contour_image(f"../plant_images/{f}")
 		plt.imshow(contoured_image)
 		plt.show()
 

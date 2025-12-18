@@ -26,12 +26,12 @@ def detect(file_name: str, detector):
 	print(boxes)
 
 def main():
-	files = os.listdir("../../extracted_images")
+	files = os.listdir("../plant_images")
 	detector = cv2.dnn_TextDetectionModel_DB("DB_TD500_resnet18.onnx")
 	detector.setBinaryThreshold(0.4)
 	detector.setPolygonThreshold(0.5)
 	for f in files:
-		contoured_image = detect(f"../../extracted_images/{f}", detector)
+		contoured_image = detect(f"../plant_images/{f}", detector)
 		plt.imshow(contoured_image)
 		plt.show()
 
